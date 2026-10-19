@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#fff6f8" />
+  <title>Happy Anniversary Janvi ❤️</title>
+  <meta name="description" content="A romantic first wedding anniversary website for Janvi, made with love by Aditya." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --rose: #c6506d;
+      --deep-rose: #8f2946;
+      --blush: #fff0f4;
+      --cream: #fffaf6;
+      --ink: #402c33;
+      --muted: #7d6870;
+      --gold: #b7894e;
+      --white: #ffffff;
+      --shadow: 0 18px 50px rgba(108, 54, 72, .12);
+      --glass: rgba(255,255,255,.82);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Montserrat", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 15% 10%, rgba(255, 197, 215, .45), transparent 32%),
+        radial-gradient(circle at 85% 20%, rgba(255, 225, 196, .55), transparent 30%),
+        linear-gradient(180deg, #fff9fb 0%, #fffdf9 55%, #fff4f7 100%);
+      overflow-x: hidden;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: .35;
+      background-image: radial-gradient(rgba(170, 93, 116, .13) 1px, transparent 1px);
+      background-size: 24px 24px;
+      z-index: -1;
+    }
+    .floating-hearts { position: fixed; inset: 0; pointer-events: none; overflow: hidden; z-index: 20; }
+    .heart { position: absolute; bottom: -50px; opacity: 0; animation: floatUp linear forwards; filter: drop-shadow(0 5px 8px rgba(143, 41, 70, .15)); }
+    @keyframes floatUp { 0% { transform: translateY(0) rotate(0deg) scale(.8); opacity: 0; } 10% { opacity: .8; } 100% { transform: translateY(-115vh) rotate(22deg) scale(1.25); opacity: 0; } }
+    .hero { min-height: 100vh; display: grid; place-items: center; padding: 56px 20px 42px; position: relative; }
+    .hero-card { width: min(1100px, 100%); border-radius: 36px; overflow: hidden; box-shadow: var(--shadow); background: rgba(255,255,255,.82); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,.85); display: grid; grid-template-columns: 1.02fr .98fr; }
+    .hero-copy { padding: clamp(38px, 6vw, 82px); display: flex; flex-direction: column; justify-content: center; }
+    .eyebrow { text-transform: uppercase; letter-spacing: .26em; font-size: .78rem; font-weight: 700; color: var(--gold); margin-bottom: 12px; }
+    .script { font-family: "Great Vibes", cursive; font-size: clamp(3.9rem, 9vw, 7.2rem); line-height: .95; color: var(--deep-rose); margin: 0; font-weight: 400; }
+    .hero h2 { font-family: "Playfair Display", serif; font-size: clamp(1.6rem, 3vw, 2.55rem); margin: 20px 0 14px; line-height: 1.25; }
+    .hero p { color: var(--muted); line-height: 1.8; font-size: 1rem; max-width: 580px; }
+    .date-badge { display: inline-flex; align-items: center; gap: 10px; width: fit-content; margin-top: 12px; padding: 12px 17px; border-radius: 999px; background: var(--blush); color: var(--deep-rose); font-weight: 700; font-size: .92rem; }
+    .hero-photo { min-height: 660px; position: relative; background: linear-gradient(180deg, rgba(111,29,53,.10), rgba(111,29,53,.35)), url("assets/photos/hero.jpg") center/cover no-repeat; }
+    .hero-photo::after { content: "Aditya  ♡  Janvi"; position: absolute; right: 26px; bottom: 24px; color: white; font-family: "Great Vibes", cursive; font-size: 2.1rem; text-shadow: 0 4px 18px rgba(0,0,0,.35); }
+    .scroll-hint { position: absolute; bottom: 18px; font-size: .85rem; color: var(--muted); animation: bob 1.8s infinite; }
+    @keyframes bob { 50% { transform: translateY(6px); } }
+    section { padding: 88px 20px; }
+    .container { width: min(1100px, 100%); margin: 0 auto; }
+    .section-title { text-align: center; margin-bottom: 44px; }
+    .section-title .mini { text-transform: uppercase; letter-spacing: .22em; color: var(--gold); font-weight: 700; font-size: .76rem; }
+    .section-title h3 { font-family: "Playfair Display", serif; font-size: clamp(2rem, 5vw, 3.3rem); margin: 9px 0 10px; color: var(--deep-rose); }
+    .section-title p { color: var(--muted); max-width: 700px; margin: 0 auto; line-height: 1.7; }
+    .countdown-wrap, .stats-wrap, .letter, .reason, .event-card, .final-card { background: rgba(255,255,255,.82); border: 1px solid rgba(255,255,255,.9); box-shadow: var(--shadow); }
+    .countdown-wrap { border-radius: 30px; padding: 36px; text-align: center; }
+    .countdown { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 25px; }
+    .time-box { background: linear-gradient(180deg, #fff, #fff5f7); border: 1px solid #f3d6de; border-radius: 20px; padding: 22px 10px; }
+    .time-box strong { display: block; font-size: clamp(1.7rem, 4vw, 3rem); color: var(--deep-rose); font-family: "Playfair Display", serif; }
+    .time-box span { color: var(--muted); font-size: .8rem; text-transform: uppercase; letter-spacing: .12em; }
+    .stats-wrap { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; padding: 24px; border-radius: 28px; margin-top: 24px; }
+    .stat { background: linear-gradient(180deg, #fff, #fff7f9); border-radius: 22px; padding: 22px; text-align: center; }
+    .stat strong { display:block; font-family: "Playfair Display", serif; color: var(--deep-rose); font-size: 2rem; }
+    .stat span { color: var(--muted); font-size: .92rem; }
+    .love-letter { display: grid; grid-template-columns: .82fr 1.18fr; gap: 34px; align-items: stretch; }
+    .quote-card { border-radius: 28px; min-height: 440px; display: flex; align-items: end; padding: 30px; color: white; background: linear-gradient(180deg, rgba(70,24,38,.1), rgba(70,24,38,.60)), url("assets/photos/memory1.jpg") center/cover no-repeat; box-shadow: var(--shadow); }
+    .quote-card p { font-family: "Playfair Display", serif; font-size: 1.7rem; line-height: 1.45; margin: 0; }
+    .letter { padding: clamp(30px, 5vw, 55px); border-radius: 28px; }
+    .letter h4 { font-family: "Great Vibes", cursive; font-size: 3.1rem; margin: 0 0 10px; color: var(--deep-rose); font-weight: 400; }
+    .letter p { line-height: 1.9; color: #5f4951; }
+    .signature { margin-top: 20px; font-family: "Great Vibes", cursive; color: var(--deep-rose); font-size: 2.4rem; }
+    .reasons { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .reason { padding: 28px 24px; border-radius: 24px; transition: transform .25s ease, box-shadow .25s ease; box-shadow: 0 12px 35px rgba(108,54,72,.08); }
+    .reason:hover { transform: translateY(-6px); box-shadow: 0 16px 42px rgba(108,54,72,.14); }
+    .reason .icon { font-size: 2rem; margin-bottom: 12px; min-height: 44px; display:flex; align-items:center; }
+
+    .icon-svg {
+      width: 42px;
+      height: 42px;
+      display: block;
+      color: var(--deep-rose);
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .reason h5 { font-family: "Playfair Display", serif; font-size: 1.28rem; margin: 0 0 8px; color: var(--deep-rose); }
+    .reason p { color: var(--muted); line-height: 1.7; font-size: .94rem; margin: 0; }
+    .gallery { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 230px; gap: 14px; }
+    .gallery figure { margin: 0; overflow: hidden; border-radius: 24px; position: relative; box-shadow: var(--shadow); background: #f6dfe4; cursor: pointer; }
+    .gallery figure:first-child { grid-column: span 2; grid-row: span 2; }
+    .gallery figure:nth-child(4) { grid-column: span 2; }
+    .gallery img { width: 100%; height: 100%; display: block; object-fit: cover; transition: transform .5s ease; }
+    .gallery figure:hover img { transform: scale(1.05); }
+    .gallery figcaption { position: absolute; left: 16px; right: 16px; bottom: 14px; padding: 10px 12px; border-radius: 14px; color: #fff; background: rgba(50, 24, 31, .38); backdrop-filter: blur(6px); font-size: .85rem; }
+    .timeline { position: relative; margin-top: 30px; }
+    .timeline::before { content: ""; position: absolute; left: 50%; top: 0; bottom: 0; width: 2px; background: #edcdd6; transform: translateX(-50%); }
+    .event { width: 50%; padding: 0 34px 34px; position: relative; }
+    .event:nth-child(even) { margin-left: 50%; }
+    .event::before { content: "❤"; position: absolute; top: 4px; right: -12px; width: 24px; height: 24px; border-radius: 50%; display: grid; place-items: center; background: white; color: var(--rose); border: 2px solid #e7bdca; font-size: .7rem; z-index: 1; }
+    .event:nth-child(even)::before { left: -12px; right: auto; }
+    .event-card { padding: 22px; border-radius: 20px; box-shadow: 0 12px 30px rgba(108,54,72,.08); }
+    .event-card time { display:block; color: var(--gold); font-weight:700; font-size: .84rem; letter-spacing:.06em; text-transform:uppercase; margin-bottom:6px; }
+    .event-card strong { display: block; color: var(--deep-rose); font-family: "Playfair Display", serif; font-size: 1.2rem; margin-bottom: 6px; }
+    .event-card span { color: var(--muted); line-height: 1.65; font-size: .92rem; }
+    .finale { padding-bottom: 100px; }
+    .final-card { text-align: center; padding: 60px 25px; border-radius: 32px; background: radial-gradient(circle at 20% 0%, rgba(255,255,255,.85), transparent 30%), linear-gradient(135deg, #f7dce4, #fff4ef); overflow: hidden; position: relative; }
+    .final-card h3 { font-family: "Great Vibes", cursive; color: var(--deep-rose); font-size: clamp(3.2rem, 8vw, 6rem); font-weight: 400; margin: 0 0 16px; line-height: 1; }
+    .final-card p { color: #654c55; max-width: 700px; margin: 0 auto 24px; line-height: 1.8; }
+    .love-btn { border: 0; padding: 15px 24px; border-radius: 999px; font: inherit; font-weight: 700; background: var(--deep-rose); color: white; cursor: pointer; box-shadow: 0 10px 24px rgba(143,41,70,.22); transition: transform .2s ease; }
+    .love-btn:hover { transform: scale(1.04); }
+    .hidden-message { max-height: 0; opacity: 0; overflow: hidden; transition: all .6s ease; max-width: 650px; margin: 0 auto; color: var(--deep-rose); font-family: "Playfair Display", serif; font-size: 1.2rem; line-height: 1.7; }
+    .hidden-message.show { max-height: 300px; opacity: 1; margin-top: 24px; }
+    footer { text-align: center; padding: 24px 20px 34px; color: var(--muted); font-size: .84rem; }
+    .music-btn { position: fixed; right: 18px; bottom: 18px; z-index: 30; border: 0; border-radius: 50%; width: 50px; height: 50px; background: white; color: var(--deep-rose); box-shadow: 0 10px 30px rgba(108,54,72,.18); cursor: pointer; font-size: 1.15rem; }
+    .lightbox { position: fixed; inset: 0; background: rgba(35, 16, 22, .90); display: none; place-items: center; z-index: 40; padding: 20px; }
+    .lightbox.show { display: grid; }
+    .lightbox-content { position: relative; width: min(94vw, 1150px); display:flex; justify-content:center; align-items:center; }
+    .lightbox img { max-width: min(92vw, 1100px); max-height: 80vh; border-radius: 20px; box-shadow: 0 25px 60px rgba(0,0,0,.35); }
+    .lightbox .close-btn { position:absolute; top:-14px; right:0; border:0; background:#fff; color:var(--deep-rose); width:44px; height:44px; border-radius:50%; font-size:1.25rem; cursor:pointer; box-shadow: 0 10px 24px rgba(0,0,0,.18); }
+    .lightbox .nav-btn { position:absolute; top:50%; transform:translateY(-50%); border:0; background:rgba(255,255,255,.96); color:var(--deep-rose); width:48px; height:48px; border-radius:50%; font-size:1.35rem; cursor:pointer; box-shadow: 0 10px 24px rgba(0,0,0,.18); }
+    .lightbox .prev-btn { left:-8px; }
+    .lightbox .next-btn { right:-8px; }
+    .lightbox-caption { color:#fff; text-align:center; margin-top:16px; font-size:1rem; line-height:1.6; max-width:min(92vw, 850px); }
+    .gallery figure { cursor: zoom-in; }
+    @media (max-width: 640px) { .lightbox .nav-btn { width:42px; height:42px; } .lightbox .prev-btn { left:4px; } .lightbox .next-btn { right:4px; } .lightbox .close-btn { top:-8px; right:4px; } }
+    @media (max-width: 960px) { .hero-card, .love-letter { grid-template-columns: 1fr; } .hero-photo { min-height: 500px; order: -1; } .gallery { grid-template-columns: 1fr 1fr; grid-auto-rows: 220px; } .gallery figure:first-child, .gallery figure:nth-child(4) { grid-column: span 2; grid-row: auto; } .reasons { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 820px) { .countdown { grid-template-columns: repeat(2, 1fr); } .stats-wrap { grid-template-columns: 1fr; } .timeline::before { left: 12px; } .event, .event:nth-child(even) { width: 100%; margin-left: 0; padding-left: 44px; padding-right: 0; } .event::before, .event:nth-child(even)::before { left: 0; right: auto; } }
+    @media (max-width: 520px) { section { padding: 68px 16px; } .hero { padding: 18px 14px 42px; } .hero-card { border-radius: 26px; } .hero-copy { padding: 34px 24px 38px; } .hero-photo { min-height: 390px; } .gallery { grid-template-columns: 1fr; } .gallery figure:first-child, .gallery figure:nth-child(4) { grid-column: auto; } .reasons { grid-template-columns: 1fr; } .countdown-wrap { padding: 24px 18px; } }
+  </style>
+</head>
+<body>
+  <div class="floating-hearts" id="hearts"></div>
+  <header class="hero">
+    <div class="hero-card">
+      <div class="hero-copy">
+        <div class="eyebrow">Our First Wedding Anniversary</div>
+        <h1 class="script">Janvi,</h1>
+        <h2>one year down, a lifetime of “us” to go. ❤️</h2>
+        <p>
+          From our very first steps toward forever to every beautiful memory after marriage,
+          you have made my life softer, brighter and more meaningful. This little website is
+          a small love note for my favorite person in the world.
+        </p>
+        <div class="date-badge">💍 Married on 27 November 2025</div>
+      </div>
+      <div class="hero-photo" aria-label="Wedding photo of Aditya and Janvi"></div>
+    </div>
+    <div class="scroll-hint">Scroll for your surprise ↓</div>
+  </header>
+
+  <section>
+    <div class="container">
+      <div class="section-title">
+        <div class="mini">Counting our moments</div>
+        <h3>Until 27 November 2026</h3>
+        <p id="countdownLabel">Every day with you is worth celebrating.</p>
+      </div>
+      <div class="countdown-wrap">
+        <div class="countdown">
+          <div class="time-box"><strong id="days">00</strong><span>Days</span></div>
+          <div class="time-box"><strong id="hours">00</strong><span>Hours</span></div>
+          <div class="time-box"><strong id="minutes">00</strong><span>Minutes</span></div>
+          <div class="time-box"><strong id="seconds">00</strong><span>Seconds</span></div>
+        </div>
+      </div>
+      <div class="stats-wrap">
+        <div class="stat"><strong>31 Jan 2025</strong><span>First meet for relation fixing</span></div>
+        <div class="stat"><strong>27 Nov 2025</strong><span>The day we became husband & wife</span></div>
+        <div class="stat"><strong>1st Anniversary</strong><span>Celebrating our first beautiful year together</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-title">
+        <div class="mini">A note from my heart</div>
+        <h3>To My Wife, My Home</h3>
+      </div>
+      <div class="love-letter">
+        <div class="quote-card">
+          <p>“I would choose you in every lifetime, in every version of us.”</p>
+        </div>
+        <div class="letter">
+          <h4>My dearest Janvi,</h4>
+          <p>
+            It has been one beautiful year since we promised to walk through life together,
+            and somehow I love you even more today than I did on our wedding day.
+          </p>
+          <p>
+            Thank you for being my partner, my peace, my biggest smile and the person I want
+            to tell everything to. I love the grand celebrations we have enjoyed together,
+            but I love our little everyday moments just as much — the laughs, the photos,
+            the silly talks, the support, the dreams and the way we keep choosing each other.
+          </p>
+          <p>
+            From our first meeting for relation fixing to our wedding day, every step of our
+            journey has felt special. This first anniversary is only the beginning. I pray we keep
+            growing together, travelling together and making a life filled with love, respect,
+            happiness and countless memories.
+          </p>
+          <p>Happy first wedding anniversary, my love. Thank you for being you.</p>
+          <div class="signature">Forever yours, Aditya ❤️</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-title">
+        <div class="mini">Why you mean so much</div>
+        <h3>Things I Love About You</h3>
+        <p>There are countless reasons, but here are a few I never want you to forget.</p>
+      </div>
+      <div class="reasons">
+        <article class="reason"><div class="icon">🤍</div><h5>Your Heart</h5><p>You bring warmth, care and sincerity into the little things, and that makes ordinary days feel beautiful.</p></article>
+        <article class="reason"><div class="icon">
+          <svg class="icon-svg" viewBox="0 0 48 48" aria-hidden="true">
+            <circle cx="24" cy="24" r="18"></circle>
+            <path d="M17 20h.01M31 20h.01"></path>
+            <path d="M16.5 28c2.4 4.2 6 6.2 7.5 6.2s5.1-2 7.5-6.2"></path>
+          </svg>
+        </div><h5>Your Smile</h5><p>Your smile still has the power to change my whole mood, even after the busiest day.</p></article>
+        <article class="reason"><div class="icon">
+          <svg class="icon-svg" viewBox="0 0 48 48" aria-hidden="true">
+            <circle cx="16" cy="17" r="5"></circle>
+            <circle cx="32" cy="17" r="5"></circle>
+            <path d="M7 36c.8-6.3 4.3-9.5 9-9.5 3 0 5.3 1.2 7 3.5"></path>
+            <path d="M41 36c-.8-6.3-4.3-9.5-9-9.5-3 0-5.3 1.2-7 3.5"></path>
+            <path d="M24 36s-6-3.8-6-8.2c0-2.6 1.8-4.8 4.4-4.8 1.1 0 2.2.5 2.9 1.4.8-.9 1.8-1.4 2.9-1.4 2.6 0 4.4 2.2 4.4 4.8 0 4.4-6 8.2-6 8.2l-1.3.8z"></path>
+          </svg>
+        </div><h5>Our Friendship</h5><p>I love that you are not only my wife — you are also my best companion and the person I can laugh with endlessly.</p></article>
+        <article class="reason"><div class="icon">🏡</div><h5>Our Home</h5><p>Home now feels less like a place and more like wherever you and I are together.</p></article>
+        <article class="reason"><div class="icon">✨</div><h5>Our Memories</h5><p>From relation fixing, engagement and wedding functions to our pre-wedding shoots — every chapter with you feels precious.</p></article>
+        <article class="reason"><div class="icon">♾️</div><h5>Our Forever</h5><p>One year is only chapter one. I cannot wait to see the rest of our story unfold.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-title">
+        <div class="mini">Our favorite frames</div>
+        <h3>Little Pieces of Us</h3>
+        <p>A few beautiful memories from our wedding and pre-wedding moments. Tap any photo to open the gallery lightbox and browse them beautifully.</p>
+      </div>
+      <div class="gallery">
+        <figure><img src="assets/photos/gallery1.jpg" alt="Wedding memory 1"><figcaption>Our wedding vows and forever promise ❤️</figcaption></figure>
+        <figure><img src="assets/photos/gallery2.jpg" alt="Wedding memory 2"><figcaption>Small details, big emotions</figcaption></figure>
+        <figure><img src="assets/photos/gallery3.jpg" alt="Wedding memory 3"><figcaption>Celebrating love with our people</figcaption></figure>
+        <figure><img src="assets/photos/gallery4.jpg" alt="Pre-wedding memory 1"><figcaption>One of our romantic pre-wedding moments</figcaption></figure>
+        <figure><img src="assets/photos/gallery5.jpg" alt="Janvi portrait"><figcaption>My beautiful bride ✨</figcaption></figure>
+        <figure><img src="assets/photos/gallery6.jpg" alt="Aditya portrait"><figcaption>The groom look 😎</figcaption></figure>
+        <figure><img src="assets/photos/gallery7.jpg" alt="Couple portrait"><figcaption>Together is my favourite place</figcaption></figure>
+        <figure><img src="assets/photos/gallery8.jpg" alt="Traditional couple memory"><figcaption>Another chapter of us, always graceful</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-title">
+        <div class="mini">Our journey</div>
+        <h3>Every Step That Led Us Here</h3>
+        <p>From our first family meeting to our wedding celebrations and precious shoots, this is the timeline of our story.</p>
+      </div>
+      <div class="timeline">
+        <div class="event"><div class="event-card"><time>31-01-2025</time><strong>First Meet for Relation Fixing</strong><span>The first important day that started our journey toward forever.</span></div></div>
+        <div class="event"><div class="event-card"><time>01-02-2025</time><strong>First Meet with Parents at Aditya’s House</strong><span>Our families met and this beautiful bond started taking shape.</span></div></div>
+        <div class="event"><div class="event-card"><time>02-02-2025</time><strong>Final Meet at Janvi’s Home</strong><span>Our parents met again, the relation was finalized, and our future together became real.</span></div></div>
+        <div class="event"><div class="event-card"><time>04-02-2025</time><strong>First Instagram Message</strong><span>Janvi sent the first Instagram message and our conversations officially began.</span></div></div>
+        <div class="event"><div class="event-card"><time>06-02-2025</time><strong>ગળા પાણી ની વિધિ</strong><span>A special ritual in our caste and a meaningful family occasion in our story.</span></div></div>
+        <div class="event"><div class="event-card"><time>20-03-2025</time><strong>Engagement</strong><span>The day our promise became public and even more beautiful.</span></div></div>
+        <div class="event"><div class="event-card"><time>30-03-2025</time><strong>Lagan Muhurat Decided</strong><span>The auspicious dates were discussed and our wedding journey moved ahead.</span></div></div>
+        <div class="event"><div class="event-card"><time>19-04-2025</time><strong>Wedding Dates Finalized</strong><span>Marriage date fixed for <b>27-11-2025</b>, with <b>26-11-2025</b> for Haldi, Mandvo and Sangeet, and <b>25-11-2025</b> for Mehendi.</span></div></div>
+        <div class="event"><div class="event-card"><time>20-04-2025</time><strong>Soniwadi Banquet Booked</strong><span>Our beloved Soniwadi Banquet was booked for two special days: 26-11-2025 for Haldi, Mandvo and Sangeet, and 27-11-2025 for the wedding.</span></div></div>
+        <div class="event"><div class="event-card"><time>15-05-2025</time><strong>Janvi’s Chaniya Choli Purchased</strong><span>A memorable shopping milestone — Janvi’s wedding chaniya choli was purchased from Bmby Wear.</span></div></div>
+        <div class="event"><div class="event-card"><time>14-06-2025</time><strong>Aditya’s Sherwani Purchased</strong><span>Aditya’s sherwani was selected from Ajay Arvind Bhai Khatri for the big day.</span></div></div>
+        <div class="event"><div class="event-card"><time>04-07-2025</time><strong>First Pre-Wedding Shoot at Churchgate</strong><span>Our first pre-wedding shoot at Churchgate gave us a beautiful collection of memories before the wedding.</span></div></div>
+        <div class="event"><div class="event-card"><time>25-10-2025</time><strong>Second Pre-Wedding Shoot at Gorai</strong><span>Our second pre-wedding shoot at Gorai added another romantic chapter to our journey toward the wedding.</span></div></div>
+        <div class="event"><div class="event-card"><time>08-11-2025</time><strong>કંકોત્રી છપાઈ ને આવી ગયી</strong><span>The wedding invitation cards were printed and arrived — another exciting milestone before the celebrations.</span></div></div>
+        <div class="event"><div class="event-card"><time>13-11-2025</time><strong>લગ્ન લેખન અને વધવાના</strong><span>A beautiful traditional pre-wedding milestone and another special family celebration in our journey.</span></div></div>
+        <div class="event"><div class="event-card"><time>21-11-2025</time><strong>જાનવી nu આનું આવી ગયુ</strong><span>An emotional and memorable occasion as another important wedding ritual arrived.</span></div></div>
+        <div class="event"><div class="event-card"><time>24-11-2025</time><strong>Groom Side Mehendi & Janvi’s Last Day at Home</strong><span>Mehendi celebrations began for the groom’s side, and it was also Janvi’s last day at her home before marriage before shifting to Soniwadi wedding place.</span></div></div>
+        <div class="event"><div class="event-card"><time>25-11-2025</time><strong>Bride & Bride’s Family Mehendi</strong><span>A colourful mehendi celebration with the bride and her family, filling the air with joy before the big day.</span></div></div>
+        <div class="event"><div class="event-card"><time>26-11-2025 · 8:45 AM</time><strong>Aditya’s Mandvo</strong><span>The wedding festivities beautifully began with Aditya’s Mandvo ceremony.</span></div></div>
+        <div class="event"><div class="event-card"><time>26-11-2025 · 10:00 AM</time><strong>Janvi’s Mandvo</strong><span>Janvi’s Mandvo ceremony added another auspicious and emotional moment to our wedding celebrations.</span></div></div>
+        <div class="event"><div class="event-card"><time>26-11-2025 · 12:00 PM</time><strong>Haldi Ceremony</strong><span>Our haldi ceremony brought laughter, blessings and bright yellow memories.</span></div></div>
+        <div class="event"><div class="event-card"><time>26-11-2025 · 5:00 PM</time><strong>Sangeet Sandhya</strong><span>An evening full of music, dance, family fun and unforgettable wedding energy.</span></div></div>
+        <div class="event"><div class="event-card"><time>27-11-2025</time><strong>Wedding Day</strong><span>The most special day of all — the day we became husband and wife forever. 💍</span></div></div>
+        <div class="event"><div class="event-card"><time>27-11-2026</time><strong>First Wedding Anniversary</strong><span>One year of marriage, a lifetime of love ahead, and still the same excitement in my heart for you.</span></div></div>
+      </div>      </div>
+    </div>
+  </section>
+
+  <section class="finale">
+    <div class="container">
+      <div class="final-card">
+        <h3>Happy Anniversary, Janvi ❤️</h3>
+        <p>If I had to relive everything again just to reach you, I would. Thank you for making “forever” feel like something I’m excited to wake up to every day.</p>
+        <button class="love-btn" id="surpriseBtn">One last thing… 💌</button>
+        <div class="hidden-message" id="hiddenMessage">Janvi, I love you more than this little website could ever say. Here’s to our first anniversary, and to growing old together while still being just as silly in love. ❤️</div>
+      </div>
+    </div>
+  </section>
+
+  <footer>Made with ❤️ by Aditya for Janvi · 27.11.2026</footer>
+  <audio id="bgMusic" loop><source src="assets/song.mp3" type="audio/mpeg"></audio>
+  <button class="music-btn" id="musicBtn" title="Play / pause music">♫</button>
+  <div class="lightbox" id="lightbox"><div class="lightbox-content"><button class="close-btn" id="lightboxClose" aria-label="Close">✕</button><button class="nav-btn prev-btn" id="lightboxPrev" aria-label="Previous">‹</button><img id="lightboxImg" src="" alt="Expanded memory"><button class="nav-btn next-btn" id="lightboxNext" aria-label="Next">›</button></div><div class="lightbox-caption" id="lightboxCaption"></div></div>
+  <script>
+    const anniversary = new Date("2026-11-27T00:00:00+05:30");
+    function updateCountdown() {
+      const now = new Date(); let diff = anniversary - now;
+      if (diff <= 0) { document.getElementById("countdownLabel").textContent = "Happy First Wedding Anniversary, Janvi & Aditya! ❤️"; ["days","hours","minutes","seconds"].forEach(id => document.getElementById(id).textContent = "00"); return; }
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24)); diff %= 1000 * 60 * 60 * 24;
+      const hours = Math.floor(diff / (1000 * 60 * 60)); diff %= 1000 * 60 * 60;
+      const minutes = Math.floor(diff / (1000 * 60)); const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+      document.getElementById("days").textContent = String(days).padStart(2, "0");
+      document.getElementById("hours").textContent = String(hours).padStart(2, "0");
+      document.getElementById("minutes").textContent = String(minutes).padStart(2, "0");
+      document.getElementById("seconds").textContent = String(seconds).padStart(2, "0");
+    }
+    updateCountdown(); setInterval(updateCountdown, 1000);
+    const surpriseBtn = document.getElementById("surpriseBtn"); const hiddenMessage = document.getElementById("hiddenMessage");
+    surpriseBtn.addEventListener("click", () => { hiddenMessage.classList.toggle("show"); surpriseBtn.textContent = hiddenMessage.classList.contains("show") ? "I love you, Janvi ❤️" : "One last thing… 💌"; burstHearts(22); });
+    const heartsContainer = document.getElementById("hearts");
+    function createHeart(x = null) { const heart = document.createElement("span"); heart.className = "heart"; heart.textContent = ["♥", "♡", "❤", "💕"][Math.floor(Math.random() * 4)]; heart.style.left = x !== null ? x + "px" : Math.random() * 100 + "vw"; heart.style.fontSize = (14 + Math.random() * 18) + "px"; heart.style.color = Math.random() > .5 ? "#c6506d" : "#e7a5b5"; heart.style.animationDuration = (5 + Math.random() * 5) + "s"; heartsContainer.appendChild(heart); setTimeout(() => heart.remove(), 10000); }
+    function burstHearts(count) { for (let i = 0; i < count; i++) setTimeout(() => createHeart(window.innerWidth / 2 + (Math.random() * 180 - 90)), i * 55); }
+    setInterval(() => createHeart(), 1400);
+    const music = document.getElementById("bgMusic"); const musicBtn = document.getElementById("musicBtn"); let playing = false;
+    musicBtn.addEventListener("click", async () => { if (!playing) { try { await music.play(); playing = true; musicBtn.textContent = "❚❚"; } catch (e) { alert("Add your song as assets/song.mp3, then tap this button again."); } } else { music.pause(); playing = false; musicBtn.textContent = "♫"; } });
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxCaption = document.getElementById('lightboxCaption');
+    const galleryFigures = Array.from(document.querySelectorAll('.gallery figure'));
+    let currentGalleryIndex = 0;
+
+    function openLightbox(index) {
+      const fig = galleryFigures[index];
+      const img = fig.querySelector('img');
+      const caption = fig.querySelector('figcaption');
+      currentGalleryIndex = index;
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+      lightboxCaption.textContent = caption ? caption.textContent : '';
+      lightbox.classList.add('show');
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('show');
+    }
+
+    function showNextImage() {
+      openLightbox((currentGalleryIndex + 1) % galleryFigures.length);
+    }
+
+    function showPrevImage() {
+      openLightbox((currentGalleryIndex - 1 + galleryFigures.length) % galleryFigures.length);
+    }
+
+    galleryFigures.forEach((fig, index) => {
+      fig.addEventListener('click', () => openLightbox(index));
+    });
+
+    document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
+    document.getElementById('lightboxNext').addEventListener('click', showNextImage);
+    document.getElementById('lightboxPrev').addEventListener('click', showPrevImage);
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (!lightbox.classList.contains('show')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowRight') showNextImage();
+      if (e.key === 'ArrowLeft') showPrevImage();
+    });
+  </script>
+</body>
+</html>
